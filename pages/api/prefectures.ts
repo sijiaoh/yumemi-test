@@ -1,9 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import {
-  fetchPrefectures,
-  Prefectures,
-} from "../../src/server/fetchPrefectures";
+import { Prefectures } from "../../src/types/Prefectures";
+import { fetchPrefectures } from "../../src/server/fetchPrefectures";
 
 export default async function handler(
   req: NextApiRequest,

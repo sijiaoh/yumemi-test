@@ -1,6 +1,5 @@
 import axios from "axios";
-
-export type Prefectures = { prefCode: number; prefName: string }[];
+import { Prefectures } from "../types/Prefectures";
 
 export async function fetchPrefectures() {
   const apiKey = process.env.RESAS_API_KEY;
@@ -8,7 +7,7 @@ export async function fetchPrefectures() {
 
   const response = await axios.get<
     unknown,
-    { data: { messages: string; result: [] } }
+    { data: { messages: string; result: Prefectures } }
   >("https://opendata.resas-portal.go.jp/api/v1/prefectures", {
     headers: { "X-API-KEY": apiKey },
   });
