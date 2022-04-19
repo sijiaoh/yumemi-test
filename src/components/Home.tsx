@@ -1,3 +1,9 @@
+import { PrefecturesSelector } from "./PrefecturesSelector";
+
 export function Home() {
-  return <div css={{ color: "red" }}>hello</div>;
+  return (
+    <div>
+      <PrefecturesSelector />
+    </div>
+  );
 }
