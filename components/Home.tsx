@@ -1,1 +1,3 @@
-export function Home() {}
+export function Home() {
+  return <div css={{ color: "red" }}>hello</div>;
+}
